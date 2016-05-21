@@ -1,2 +1,2 @@
-# pact-go-docker-build
+# Pact Go - Docker Build
 Docker image for building Pact Go
