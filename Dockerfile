@@ -4,7 +4,9 @@ MAINTAINER Matt Fellows <m@onegeek.com.au>
 
 RUN apt-get update
 RUN apt-get install -y curl patch gawk g++ gcc make libc6-dev patch libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev unzip zip sudo
-RUN useradd -ms /bin/bash app
+RUN useradd -ms /bin/bash app && \
+  usermod -g root app && \
+  chmod g+w /
 RUN echo "app ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 USER app
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
