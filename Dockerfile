@@ -9,7 +9,7 @@ RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A170311380
 
 # RUN /bin/bash -l -c ". /etc/profile.d/rvm.sh && rvm install 2.2.0"
 RUN /bin/bash -l -c "rvm requirements"
-RUN /bin/bash -l -c "rvm install 2.2.0"
+RUN /bin/bash -l -c "rvm install 2.2.2"
 RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
 
 ENTRYPOINT ["bash", "-l"]
