@@ -12,4 +12,3 @@ RUN /bin/bash -l -c "rvm requirements"
 RUN /bin/bash -l -c "rvm install 2.2.2"
 RUN /bin/bash -l -c "gem install bundler --no-ri --no-rdoc"
 RUN mkdir -p /pipeline
-ENTRYPOINT ["bash", "-l"]
